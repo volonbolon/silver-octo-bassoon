@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		7987C89625D5D4A200F76AC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7987C89525D5D4A200F76AC1 /* Preview Assets.xcassets */; };
 		7987C8A125D5D4A200F76AC1 /* NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7987C8A025D5D4A200F76AC1 /* NewsTests.swift */; };
 		7987C8AC25D5D4A200F76AC1 /* NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7987C8AB25D5D4A200F76AC1 /* NewsUITests.swift */; };
+		7987C8C625D5D61C00F76AC1 /* NewsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7987C8C525D5D61C00F76AC1 /* NewsNetwork.swift */; };
+		7987C8D125D5D7FC00F76AC1 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7987C8D025D5D7FC00F76AC1 /* Story.swift */; };
+		79E5FBE025D5E93B0028F689 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E5FBDF25D5E93B0028F689 /* APIClient.swift */; };
+		79E5FBE625D5E9CC0028F689 /* VolonbolonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 79E5FBE525D5E9CC0028F689 /* VolonbolonKit */; };
+		79E5FBE725D5E9CC0028F689 /* VolonbolonKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 79E5FBE525D5E9CC0028F689 /* VolonbolonKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		79E5FBF925D5FB180028F689 /* ReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E5FBF825D5FB180028F689 /* ReaderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +38,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		79E5FBE825D5E9CC0028F689 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				79E5FBE725D5E9CC0028F689 /* VolonbolonKit in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7987C88B25D5D4A000F76AC1 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7987C88E25D5D4A000F76AC1 /* NewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApp.swift; sourceTree = "<group>"; };
@@ -45,6 +65,10 @@
 		7987C8A725D5D4A200F76AC1 /* NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7987C8AB25D5D4A200F76AC1 /* NewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsUITests.swift; sourceTree = "<group>"; };
 		7987C8AD25D5D4A200F76AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7987C8C525D5D61C00F76AC1 /* NewsNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNetwork.swift; sourceTree = "<group>"; };
+		7987C8D025D5D7FC00F76AC1 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		79E5FBDF25D5E93B0028F689 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		79E5FBF825D5FB180028F689 /* ReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E5FBE625D5E9CC0028F689 /* VolonbolonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +100,8 @@
 		7987C88225D5D4A000F76AC1 = {
 			isa = PBXGroup;
 			children = (
+				79E5FC0025D5FC370028F689 /* NewsKit */,
+				79E5FBD825D5E8C30028F689 /* NewsUIKit */,
 				7987C88D25D5D4A000F76AC1 /* News */,
 				7987C89F25D5D4A200F76AC1 /* NewsTests */,
 				7987C8AA25D5D4A200F76AC1 /* NewsUITests */,
@@ -130,6 +157,40 @@
 			path = NewsUITests;
 			sourceTree = "<group>";
 		};
+		7987C8BC25D5D5A900F76AC1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				7987C8C525D5D61C00F76AC1 /* NewsNetwork.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		7987C8CF25D5D7F200F76AC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7987C8D025D5D7FC00F76AC1 /* Story.swift */,
+				79E5FBF825D5FB180028F689 /* ReaderViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		79E5FBD825D5E8C30028F689 /* NewsUIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewsUIKit;
+			sourceTree = "<group>";
+		};
+		79E5FC0025D5FC370028F689 /* NewsKit */ = {
+			isa = PBXGroup;
+			children = (
+				79E5FBDF25D5E93B0028F689 /* APIClient.swift */,
+				7987C8BC25D5D5A900F76AC1 /* Repositories */,
+				7987C8CF25D5D7F200F76AC1 /* Models */,
+			);
+			path = NewsKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,12 +201,16 @@
 				7987C88725D5D4A000F76AC1 /* Sources */,
 				7987C88825D5D4A000F76AC1 /* Frameworks */,
 				7987C88925D5D4A000F76AC1 /* Resources */,
+				79E5FBE825D5E9CC0028F689 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = News;
+			packageProductDependencies = (
+				79E5FBE525D5E9CC0028F689 /* VolonbolonKit */,
+			);
 			productName = News;
 			productReference = 7987C88B25D5D4A000F76AC1 /* News.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +282,9 @@
 				Base,
 			);
 			mainGroup = 7987C88225D5D4A000F76AC1;
+			packageReferences = (
+				79E5FBE425D5E9CC0028F689 /* XCRemoteSwiftPackageReference "super-octo-potato" */,
+			);
 			productRefGroup = 7987C88C25D5D4A000F76AC1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +327,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7987C8D125D5D7FC00F76AC1 /* Story.swift in Sources */,
 				7987C89125D5D4A000F76AC1 /* ContentView.swift in Sources */,
+				79E5FBF925D5FB180028F689 /* ReaderViewModel.swift in Sources */,
+				79E5FBE025D5E93B0028F689 /* APIClient.swift in Sources */,
 				7987C88F25D5D4A000F76AC1 /* NewsApp.swift in Sources */,
+				7987C8C625D5D61C00F76AC1 /* NewsNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +646,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		79E5FBE425D5E9CC0028F689 /* XCRemoteSwiftPackageReference "super-octo-potato" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/volonbolon/super-octo-potato";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		79E5FBE525D5E9CC0028F689 /* VolonbolonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 79E5FBE425D5E9CC0028F689 /* XCRemoteSwiftPackageReference "super-octo-potato" */;
+			productName = VolonbolonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7987C88325D5D4A000F76AC1 /* Project object */;
 }

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "VolonbolonKit",
+        "repositoryURL": "https://github.com/volonbolon/super-octo-potato",
+        "state": {
+          "branch": "main",
+          "revision": "537d33972763f0caa83473a88a4c4719352c5612",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

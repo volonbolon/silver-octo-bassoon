@@ -6,16 +6,40 @@
 //
 
 import SwiftUI
+import Combine
 
-struct ContentView: View {
+
+
+struct NewsCell: View {
+    let story: Story
+    init(_ story: Story) {
+        self.story = story
+    }
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(alignment: .center, spacing: nil, content: {
+            Text(verbatim: story.title)
+            Text("placeholder")
+        })
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct ContentView: View {
+    @ObservedObject var model: ReaderViewModel
+    
+    init(model: ReaderViewModel) {
+        self.model = model
+        
+        self.model.fetchStories()
+    }
+    
+    var body: some View {
+        NavigationView {
+            List {
+                ForEach(self.model.allStories) { story in
+                    NewsCell(story)
+                }
+            }
+        }
     }
 }
