@@ -19,7 +19,6 @@ struct NewsCell: View {
     var body: some View {
         VStack(alignment: .center, spacing: nil, content: {
             Text(verbatim: story.title)
-            Text("placeholder")
         })
     }
 }
@@ -40,6 +39,7 @@ struct ContentView: View {
                     NewsCell(story)
                 }
             }
+            .navigationTitle("News")
         }
     }
 }
